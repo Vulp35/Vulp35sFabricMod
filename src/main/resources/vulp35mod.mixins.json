@@ -4,9 +4,11 @@
   "package": "space.opendisk.vulp35mod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FishingBobberEntityMixin"
   ],
   "client": [
-    "ExampleMixin"
+    "ExampleMixin",
+    "GameMenuScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
