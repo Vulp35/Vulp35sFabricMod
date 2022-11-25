@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "vulp35mod",
+  "version": "${version}",
+
+  "name": "Vulp35's Fabric Mod",
+  "description": "A mod by Vulp35 to make it a little bit more his.",
+  "authors": [
+    "Vulp35"
+  ],
+  "contact": {
+    "homepage": "https://opendisk.space/",
+    "sources": "https://github.com/Vulp35/Vulp35sFabricMod",
+    "issues": "https://github.com/Vulp35/Vulp35sFabricMod/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/vulp35mod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "space.opendisk.vulp35mod.Vulp35mod"
+    ],
+    "client": [
+    ]
+  },
+  "mixins": [
+    "vulp35mod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
