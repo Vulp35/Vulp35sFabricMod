@@ -22,7 +22,8 @@
     "main": [
       "space.opendisk.vulp35mod.Vulp35mod"
     ],
-    "client": [
+    "modemenu": [
+      "space.opendisk.vulp35mod.menu.ModMenuApiImpl"
     ]
   },
   "mixins": [
