@@ -22,7 +22,7 @@
     "main": [
       "space.opendisk.vulp35mod.Vulp35mod"
     ],
-    "modemenu": [
+    "modmenu": [
       "space.opendisk.vulp35mod.menu.ModMenuApiImpl"
     ]
   },

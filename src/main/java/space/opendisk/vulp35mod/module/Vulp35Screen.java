@@ -15,16 +15,16 @@ public class Vulp35Screen extends Screen {
     private final GameOptions options;
 
     public Vulp35Screen(Screen parent, GameOptions options) {
-        super(Text.literal("Text"));
+        super(Text.literal("Vulp35's Mod"));
         this.parent = parent;
         this.options = options;
     }
 
     Text autoFishingText() {
         if(Vulp35mod.autoFishingEnabled) {
-            return Text.literal("Autofishing is Enabled");
+            return Text.literal("Auto-fishing is Enabled");
         } else {
-            return Text.literal("Autofishing is Disabled");
+            return Text.literal("Auto-fishing is Disabled");
         }
     }
 
@@ -37,7 +37,7 @@ public class Vulp35Screen extends Screen {
     }
 
     protected void init() {
-        // Autofishing button
+        // Auto-fishing button
         this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 90, 200, 20,
                 autoFishingText(), button -> {
             Vulp35mod.autoFishingEnabled = !Vulp35mod.autoFishingEnabled;
