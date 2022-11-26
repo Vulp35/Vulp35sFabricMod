@@ -28,12 +28,27 @@ public class Vulp35Screen extends Screen {
         }
     }
 
+    Text flyingText() {
+        if(Vulp35mod.flyingEnabled) {
+            return Text.literal("Flying is Enabled");
+        } else {
+            return Text.literal("Flying is Disabled");
+        }
+    }
+
     protected void init() {
         // Autofishing button
         this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 90, 200, 20,
                 autoFishingText(), button -> {
             Vulp35mod.autoFishingEnabled = !Vulp35mod.autoFishingEnabled;
             button.setMessage(autoFishingText());
+        }));
+
+        // Flying button
+        this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 65, 200, 20,
+                flyingText(), button -> {
+            Vulp35mod.flyingEnabled = !Vulp35mod.flyingEnabled;
+            button.setMessage(flyingText());
         }));
 
         // Back Button
