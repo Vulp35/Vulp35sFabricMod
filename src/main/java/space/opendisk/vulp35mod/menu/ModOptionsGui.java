@@ -27,11 +27,11 @@ public class ModOptionsGui extends LightweightGuiDescription {
         label.setHorizontalAlignment(HorizontalAlignment.CENTER);
         root.add(label, 0, 0, 8, 2);
 
-        WToggleButton autofishingToggle = new WToggleButton(Text.literal("Auto-fishing"));
+        WToggleButton autofishingToggle = new WToggleButton(Text.literal("Auto fishing"));
         autofishingToggle.setToggle(Vulp35mod.autoFishingEnabled);
         autofishingToggle.setOnToggle(on -> {
             Vulp35mod.autoFishingEnabled = !Vulp35mod.autoFishingEnabled;
-            Vulp35mod.LOGGER.info("Auto-fishing is " + (on ? "on" : "off"));
+            Vulp35mod.LOGGER.info("Auto fishing is " + (on ? "on" : "off"));
         });
         root.add(autofishingToggle, 0, 1 );
 
