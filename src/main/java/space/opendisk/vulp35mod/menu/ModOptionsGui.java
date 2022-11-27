@@ -15,11 +15,13 @@ import space.opendisk.vulp35mod.Vulp35mod;
 
 public class ModOptionsGui extends LightweightGuiDescription {
 
+    public static int gridSize = 18;
     public ModOptionsGui(Screen previous) {
 
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
         root.setInsets(Insets.ROOT_PANEL);
+        root.setSize(gridSize*8, gridSize*4);
 
         WLabel label = new WLabel(Text.translatable("title.vulp35mod.vulp35smod"));
         label.setHorizontalAlignment(HorizontalAlignment.CENTER);
@@ -30,18 +32,18 @@ public class ModOptionsGui extends LightweightGuiDescription {
             Vulp35mod.autoFishingEnabled = !Vulp35mod.autoFishingEnabled;
             Vulp35mod.LOGGER.info("Auto-fishing is " + (on ? "on" : "off"));
         });
-        root.add(autofishingToggle, 0, 2 );
+        root.add(autofishingToggle, 0, 1 );
 
         WToggleButton flyToggle = new WToggleButton(Text.literal("Flying"));
         flyToggle.setOnToggle(on -> {
             Vulp35mod.flyingEnabled = !Vulp35mod.flyingEnabled;
             Vulp35mod.LOGGER.info("Flying is " + (on ? "on" : "off"));
         });
-        root.add(flyToggle, 0, 4 );
+        root.add(flyToggle, 0, 2 );
 
 
         WButton backButton = new WButton(Text.translatable("Back"));
-        root.add(backButton, 0, 8, 4 ,1);
+        root.add(backButton, 0, 4, 4 ,1);
         backButton.setOnClick(()-> MinecraftClient.getInstance().setScreen(previous));
 
 
