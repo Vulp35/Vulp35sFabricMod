@@ -34,14 +34,6 @@ public class ModOptionsGui extends LightweightGuiDescription {
         });
         root.add(autofishingToggle, 0, 1 );
 
-        WToggleButton flyToggle = new WToggleButton(Text.literal("Flying"));
-        flyToggle.setOnToggle(on -> {
-            Vulp35mod.flyingEnabled = !Vulp35mod.flyingEnabled;
-            Vulp35mod.LOGGER.info("Flying is " + (on ? "on" : "off"));
-        });
-        root.add(flyToggle, 0, 2 );
-
-
         WButton backButton = new WButton(Text.translatable("Back"));
         root.add(backButton, 0, 4, 4 ,1);
         backButton.setOnClick(()-> MinecraftClient.getInstance().setScreen(previous));
